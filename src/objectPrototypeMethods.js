@@ -30,6 +30,7 @@ console.log(
   mayank.name.getFull()
 );
 
+// `this` refers to current class instance
 function countryClass(name, continent) {
   (this.name = name),
     (this.continent = continent),
@@ -51,6 +52,7 @@ const button = document.createElement("button");
 button.textContent = "click me";
 document.body.append(button);
 
+// `this` refers to target element for events
 button.addEventListener("click", function () {
   console.log("event", this);
 });
