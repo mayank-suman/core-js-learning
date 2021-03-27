@@ -3,14 +3,11 @@
 // "use strict";
 
 // Global
-console.log("🚀 ~ file: objectPrototypeMethods.js ~ line 4 ~ this", this);
+console.log(" global this ", this);
 
 // `this` will point to `windows` until we are not using `use strict`
 function globalFunction() {
-  console.log(
-    "🚀 ~ file: objectPrototypeMethods.js ~ line 9 ~ globalFunction ~ this",
-    this
-  );
+  console.log("function this ", this);
 }
 
 globalFunction();
@@ -25,10 +22,7 @@ const mayank = {
   },
 };
 
-console.log(
-  "🚀 ~ file: objectPrototypeMethods.js ~ line 27 ~ className.getName()",
-  mayank.name.getFull()
-);
+console.log("className.getName() ", mayank.name.getFull());
 
 // `this` refers to current class instance
 function countryClass(name, continent) {
@@ -43,10 +37,7 @@ function countryClass(name, continent) {
 
 const india = new countryClass("India", "asia");
 
-console.log(
-  "🚀 ~ file: objectPrototypeMethods.js ~ line 44 ~ india.getContinent()",
-  india.location.getContinent()
-);
+console.log("india.getContinent() ", india.location.getContinent());
 
 const button = document.createElement("button");
 button.textContent = "click me";
@@ -54,5 +45,5 @@ document.body.append(button);
 
 // `this` refers to target element for events
 button.addEventListener("click", function () {
-  console.log("event", this);
+  console.log("event ", this);
 });
