@@ -53,3 +53,14 @@ monk.heal();
 
 // Call parent prototype
 monk.greet();
+
+// function Employee(){
+//   this.name = 'Shubham';
+//   }
+
+//   function Manager(){
+//   this.id = '1';
+//   }
+//   Manager.prototype.name = new Employee();
+//   let mng = new Manager();
+//   mng.__proto__
